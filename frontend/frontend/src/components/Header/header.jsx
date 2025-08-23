@@ -312,12 +312,12 @@ const Header = () => {
                   Welcome To Everglow Jewels!
                 </p>
                 <ul className="space-y-3 text-gray-700">
-                  <Link to="/profile" onClick={handleLinkClick}><li className="hover:text-[#4f1c51]">Your Profile</li></Link>
-                  <Link to="/myorder" onClick={handleLinkClick}><li className="hover:text-[#4f1c51]">My Orders</li></Link>
-                  <Link to="/terms" onClick={handleLinkClick}><li className="hover:text-[#4f1c51]">Terms & Conditions</li></Link>
-                  <Link to="/privacy" onClick={handleLinkClick}><li className="hover:text-[#4f1c51]">Privacy Policy</li></Link>
-                  <Link to="/contact" onClick={handleLinkClick}><li className="hover:text-[#4f1c51]">Contact Us</li></Link>
-                  <Link to="/logout" onClick={handleLinkClick}><li className="hover:text-red-600">Logout</li></Link>
+                  <Link to="/profile" onClick={handleLinkClick}><li className="hover:text-[#4f1c51] mb-2">Your Profile</li></Link>
+                  <Link to="/myorder" onClick={handleLinkClick}><li className="hover:text-[#4f1c51] mb-2">My Orders</li></Link>
+                  <Link to="/terms" onClick={handleLinkClick}><li className="hover:text-[#4f1c51] mb-2">Terms & Conditions</li></Link>
+                  <Link to="/privacy" onClick={handleLinkClick}><li className="hover:text-[#4f1c51] mb-2">Privacy Policy</li></Link>
+                  <Link to="/contact" onClick={handleLinkClick}><li className="hover:text-[#4f1c51] mb-2">Contact Us</li></Link>
+                  <Link to="/logout" onClick={handleLinkClick}><li className="hover:text-red-600 mb-2">Logout</li></Link>
                 </ul>
               </div>
             )}
