@@ -39,7 +39,7 @@
 //                             (Icon, i) => (
 //                                 <Icon
 //                                     key={i}
-//                                     className="cursor-pointer hover:text-yellow-300 transition-colors"
+//                                     className="cursor-pointer hover:text-[#451c49] transition-colors"
 //                                 />
 //                             )
 //                         )}
@@ -60,7 +60,7 @@
 //                         ].map((item, i) => (
 //                             <li
 //                                 key={i}
-//                                 className="hover:underline cursor-pointer hover:text-yellow-300 transition"
+//                                 className="hover:underline cursor-pointer hover:text-[#451c49] transition"
 //                             >
 //                                 {item}
 //                             </li>
@@ -83,7 +83,7 @@
 //                         ].map((item, i) => (
 //                             <li
 //                                 key={i}
-//                                 className="hover:underline cursor-pointer hover:text-yellow-300 transition"
+//                                 className="hover:underline cursor-pointer hover:text-[#451c49] transition"
 //                             >
 //                                 {item}
 //                             </li>
@@ -136,7 +136,7 @@
 //     />
 //     <button
 //       type="submit"
-//       className="flex items-center justify-center w-12 h-12 mr-5 m-1 rounded-full  bg-white text-purple-800 transition"
+//       className="flex items-center justify-center w-12 h-12 mr-5 m-1 rounded-full  bg-white text-#451c51 transition"
 //       aria-label="Subscribe to newsletter"
 //     >
 //       ▶
@@ -165,7 +165,7 @@ import {
   FaLinkedinIn,
   FaPinterestP,
 } from "react-icons/fa";
-
+import { IoIosArrowForward } from "react-icons/io";
 import bgurl from "../../assets/bgurl.png"; // 🔹 Background image
 import Logo from "../../assets/EverGlow1.png"; // 🔹 Logo
 
@@ -273,13 +273,14 @@ export default function Footer() {
         </div>
 
         {/* 5. Newsletter */}
-        <div className="text-center md:text-left">
+        <div className="max-w-xl mx-auto text-center md:text-left">
+          {/* Heading */}
           <h3 className="uppercase text-sm tracking-widest mb-2 text-white">
             Newsletter
           </h3>
           <p className="text-3xl font-serif mb-6 text-white">Join Today</p>
 
-          {/* Email Input + Button in one Rounded Box */}
+          {/* Email Input + Button */}
           <form className="flex items-center border border-white rounded-full overflow-hidden max-w-md mx-auto md:mx-0">
             <input
               type="email"
@@ -289,10 +290,10 @@ export default function Footer() {
             />
             <button
               type="submit"
-              className="flex items-center justify-center w-12 h-12 mr-2 m-1 rounded-full bg-white text-purple-800 hover:bg-yellow-300 hover:text-black transition"
+              className="flex items-center justify-center w-12 h-12 mr-2 m-1 rounded-full bg-white text-[#451c51] hover:bg-[#451c51] hover:text-black transition"
               aria-label="Subscribe to newsletter"
             >
-              ▶
+              <IoIosArrowForward size={22} />
             </button>
           </form>
         </div>
