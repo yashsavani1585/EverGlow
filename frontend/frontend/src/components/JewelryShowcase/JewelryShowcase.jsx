@@ -535,6 +535,150 @@
 // export default JewelryShowcase;
 
 
+// import React from "react";
+
+// import product1 from "../../assets/productImg.png";
+// import product2 from "../../assets/productImg.png";
+// import product3 from "../../assets/productImg.png";
+
+// import new1 from "../../assets/EverglowPost1.png";
+// import new2 from "../../assets/EverglowPost2.png";
+// import new3 from "../../assets/EverglowPost3.png";
+// import new4 from "../../assets/EverglowPost4.png";
+
+// import PromotionalBanner from "../../assets/productAds1.png";
+// import ProductCard from "../ProductCard/ProductCard";
+
+// // 🔹 DiscoverBlock Component
+// const DiscoverBlock = ({ title, subtitle, buttonText }) => (
+//   <div className="flex flex-col justify-center items-start max-w-[200px]">
+//     <p className="text-gray-600 text-sm font-medium">{title}</p>
+//     <h3 className="text-xl md:text-2xl text-gray-900 font-semibold leading-snug my-2 uppercase tracking-wide">
+//       {subtitle}
+//     </h3>
+//     <button className="border border-gray-700 text-gray-800 font-medium py-2 px-6 mt-4 text-sm uppercase tracking-wide transition-colors hover:bg-gray-900 hover:text-white">
+//       {buttonText}
+//     </button>
+//   </div>
+// );
+
+// // 🔹 ProductCard Component
+
+
+// // 🔹 Main Showcase Component
+// const JewelryShowcase = () => {
+//   // ✅ 25 Products
+//   const products = [
+//     { id: 1, title: "Brilliant Round cut Everglow jewels", oldPrice: "₹3299", price: "₹2699", image: product1 },
+//     { id: 2, title: "Elegant Gold Necklace", oldPrice: "₹4999", price: "₹4599", image: product2 },
+//     { id: 3, title: "Classic Diamond Ring", oldPrice: "₹5999", price: "₹5599", image: product3 },
+//     { id: 4, title: "Royal Silver Bracelet", price: "₹3599", image: product1 },
+//     { id: 5, title: "Stylish Diamond Earrings", oldPrice: "₹3999", price: "₹3499", image: product2 },
+//     { id: 6, title: "Modern Gold Bangles", oldPrice: "₹4499", price: "₹4099", image: product3 },
+//     { id: 7, title: "Luxury Platinum Ring", oldPrice: "₹9999", price: "₹8999", image: product1 },
+//     { id: 8, title: "Pearl Pendant Necklace", oldPrice: "₹4599", price: "₹4199", image: product2 },
+//     { id: 9, title: "Diamond Stud Earrings", oldPrice: "₹5299", price: "₹4899", image: product3 },
+//     { id: 10, title: "Gold Chain Bracelet", price: "₹3799", image: product1 },
+//     { id: 11, title: "Everglow Crown Jewel", oldPrice: "₹8999", price: "₹7999", image: product2 },
+//     { id: 12, title: "Vintage Silver Ring", oldPrice: "₹2699", price: "₹2299", image: product3 },
+//     { id: 13, title: "Ruby Royal Necklace", oldPrice: "₹6499", price: "₹5999", image: product1 },
+//     { id: 14, title: "Emerald Stone Earrings", oldPrice: "₹3499", price: "₹3099", image: product2 },
+//     { id: 15, title: "Sapphire Gold Ring", oldPrice: "₹7299", price: "₹6899", image: product3 },
+//     { id: 16, title: "Pearl Anklet", price: "₹2999", image: product1 },
+//     { id: 17, title: "Kundan Bridal Set", oldPrice: "₹11999", price: "₹9999", image: product2 },
+//     { id: 18, title: "Designer Pendant Chain", oldPrice: "₹4599", price: "₹4199", image: product3 },
+//     { id: 19, title: "Temple Gold Necklace", oldPrice: "₹8999", price: "₹8499", image: product1 },
+//     { id: 20, title: "Rose Gold Ring", oldPrice: "₹3799", price: "₹3399", image: product2 },
+//     { id: 21, title: "Platinum Band", oldPrice: "₹13999", price: "₹12499", image: product3 },
+//     { id: 22, title: "Antique Silver Necklace", price: "₹4599", image: product1 },
+//     { id: 23, title: "Minimalist Chain", oldPrice: "₹2599", price: "₹2299", image: product2 },
+//     { id: 24, title: "Royal Diamond Set", oldPrice: "₹15999", price: "₹14999", image: product3 },
+//     { id: 25, title: "Floral Gold Earrings", oldPrice: "₹4999", price: "₹4599", image: product1 },
+//   ];
+
+//   return (
+//     <div className="px-4 sm:px-6 md:px-12 lg:px-20 py-12 space-y-16">
+
+//       {/* 🔹 First 8 Products */}
+//       <section>
+//         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-6">
+//           {products.slice(0, 8).map((product) => (
+//             <ProductCard key={product.id} product={product} />
+//           ))}
+//         </div>
+//       </section>
+
+//       {/* 🔹 New Collection */}
+//       <section className="bg-white py-12 font-sans">
+//         <div className="max-w-7xl mx-auto">
+//           <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900 mb-12 tracking-widest uppercase">
+//             New Collection
+//           </h2>
+
+//           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+//             {/* Left Column */}
+//             <div className="flex flex-col gap-10">
+//               <img src={new1} alt="Jewelry" className="w-full h-auto object-cover shadow-md rounded-lg" />
+//               <div className="flex flex-col sm:flex-row items-center gap-6">
+//                 <DiscoverBlock title="Jewelry Tells" subtitle="A Great Story" buttonText="Discover more" />
+//                 <img src={new3} alt="Bracelet" className="w-full sm:w-1/2 object-cover shadow-md rounded-lg" />
+//               </div>
+//             </div>
+
+//             {/* Right Column */}
+//             <div className="flex flex-col gap-10">
+//               <div className="flex flex-col sm:flex-row items-center gap-6">
+//                 <img src={new2} alt="Bracelet" className="w-full sm:w-1/2 object-cover shadow-md rounded-lg " />
+//                 <DiscoverBlock title="Discover" subtitle="New Arrivals" buttonText="Discover more" />
+//               </div>
+//               <img src={new4} alt="Pendant" className="w-full h-auto object-cover shadow-md rounded-lg" />
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* 🔹 Next 8 Products */}
+//       <section>
+//         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-6">
+//           {products.slice(8, 16).map((product) => (
+//             <ProductCard key={product.id} product={product} />
+//           ))}
+//         </div>
+//       </section>
+
+//       {/* 🔹 Banner + Right Single Product */}
+//       <section className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+//         {/* Left Banner */}
+//         <div className="md:col-span-2 rounded-2xl overflow-hidden">
+//           <img
+//             src={PromotionalBanner}
+//             alt="Promotional Banner"
+//             className="w-full h-[320px] sm:h-[400px] md:h-[420px] object-cover"
+//             loading="lazy"
+//             decoding="async"
+//           />
+//         </div>
+
+//         {/* Right Single Product */}
+//         <div>
+//           <ProductCard product={products[0]} imageH="h-[180px] md:h-[250px]" />
+//         </div>
+//       </section>
+
+//       {/* 🔹 Last 9 Products */}
+//       <section>
+//         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-6">
+//           {products.slice(16, 25).map((product) => (
+//             <ProductCard key={product.id} product={product} />
+//           ))}
+//         </div>
+//       </section>
+//     </div>
+//   );
+// };
+
+// export default JewelryShowcase;
+
 import React from "react";
 
 import product1 from "../../assets/productImg.png";
@@ -549,59 +693,55 @@ import new4 from "../../assets/EverglowPost4.png";
 import PromotionalBanner from "../../assets/productAds1.png";
 import ProductCard from "../ProductCard/ProductCard";
 
-// 🔹 DiscoverBlock Component
+/* 🔹 DiscoverBlock */
 const DiscoverBlock = ({ title, subtitle, buttonText }) => (
-  <div className="flex flex-col justify-center items-start max-w-[200px]">
+  <div className="flex flex-col justify-center items-start max-w-[220px]">
     <p className="text-gray-600 text-sm font-medium">{title}</p>
-    <h3 className="text-xl md:text-2xl text-gray-900 font-semibold leading-snug my-2 uppercase tracking-wide">
+    <h3 className="text-lg sm:text-xl md:text-2xl text-gray-900 font-semibold leading-snug my-2 uppercase tracking-wide">
       {subtitle}
     </h3>
-    <button className="border border-gray-700 text-gray-800 font-medium py-2 px-6 mt-4 text-sm uppercase tracking-wide transition-colors hover:bg-gray-900 hover:text-white">
+    <button className="border border-gray-700 text-gray-800 font-medium py-2 px-6 mt-4 text-sm uppercase tracking-wide rounded-lg transition-colors hover:bg-gray-900 hover:text-white">
       {buttonText}
     </button>
   </div>
 );
 
-// 🔹 ProductCard Component
-
-
-// 🔹 Main Showcase Component
 const JewelryShowcase = () => {
-  // ✅ 25 Products
   const products = [
-    { id: 1, title: "Brilliant Round cut Everglow jewels", oldPrice: "₹3299", price: "₹2699", image: product1 },
-    { id: 2, title: "Elegant Gold Necklace", oldPrice: "₹4999", price: "₹4599", image: product2 },
-    { id: 3, title: "Classic Diamond Ring", oldPrice: "₹5999", price: "₹5599", image: product3 },
-    { id: 4, title: "Royal Silver Bracelet", price: "₹3599", image: product1 },
-    { id: 5, title: "Stylish Diamond Earrings", oldPrice: "₹3999", price: "₹3499", image: product2 },
-    { id: 6, title: "Modern Gold Bangles", oldPrice: "₹4499", price: "₹4099", image: product3 },
-    { id: 7, title: "Luxury Platinum Ring", oldPrice: "₹9999", price: "₹8999", image: product1 },
-    { id: 8, title: "Pearl Pendant Necklace", oldPrice: "₹4599", price: "₹4199", image: product2 },
-    { id: 9, title: "Diamond Stud Earrings", oldPrice: "₹5299", price: "₹4899", image: product3 },
-    { id: 10, title: "Gold Chain Bracelet", price: "₹3799", image: product1 },
-    { id: 11, title: "Everglow Crown Jewel", oldPrice: "₹8999", price: "₹7999", image: product2 },
-    { id: 12, title: "Vintage Silver Ring", oldPrice: "₹2699", price: "₹2299", image: product3 },
-    { id: 13, title: "Ruby Royal Necklace", oldPrice: "₹6499", price: "₹5999", image: product1 },
-    { id: 14, title: "Emerald Stone Earrings", oldPrice: "₹3499", price: "₹3099", image: product2 },
-    { id: 15, title: "Sapphire Gold Ring", oldPrice: "₹7299", price: "₹6899", image: product3 },
-    { id: 16, title: "Pearl Anklet", price: "₹2999", image: product1 },
-    { id: 17, title: "Kundan Bridal Set", oldPrice: "₹11999", price: "₹9999", image: product2 },
-    { id: 18, title: "Designer Pendant Chain", oldPrice: "₹4599", price: "₹4199", image: product3 },
-    { id: 19, title: "Temple Gold Necklace", oldPrice: "₹8999", price: "₹8499", image: product1 },
-    { id: 20, title: "Rose Gold Ring", oldPrice: "₹3799", price: "₹3399", image: product2 },
-    { id: 21, title: "Platinum Band", oldPrice: "₹13999", price: "₹12499", image: product3 },
-    { id: 22, title: "Antique Silver Necklace", price: "₹4599", image: product1 },
-    { id: 23, title: "Minimalist Chain", oldPrice: "₹2599", price: "₹2299", image: product2 },
-    { id: 24, title: "Royal Diamond Set", oldPrice: "₹15999", price: "₹14999", image: product3 },
-    { id: 25, title: "Floral Gold Earrings", oldPrice: "₹4999", price: "₹4599", image: product1 },
+    { id: 1, title: "Brilliant Round cut Everglow jewels", oldPrice: "₹3299", price: "₹2699", image: product1, discount: "10%" },
+    { id: 2, title: "Elegant Gold Necklace", oldPrice: "₹4999", price: "₹4599", image: product2, discount: "10%" },
+    { id: 3, title: "Classic Diamond Ring", oldPrice: "₹5999", price: "₹5599", image: product3, discount: "10%" },
+    { id: 4, title: "Royal Silver Bracelet", price: "₹3599", image: product1, discount: "10%" },
+    { id: 5, title: "Stylish Diamond Earrings", oldPrice: "₹3999", price: "₹3499", image: product2, discount: "10%" },
+    { id: 6, title: "Modern Gold Bangles", oldPrice: "₹4499", price: "₹4099", image: product3, discount: "10%" },
+    { id: 7, title: "Luxury Platinum Ring", oldPrice: "₹9999", price: "₹8999", image: product1, discount: "10%" },
+    { id: 8, title: "Pearl Pendant Necklace", oldPrice: "₹4599", price: "₹4199", image: product2, discount: "10%" },
+    { id: 9, title: "Diamond Stud Earrings", oldPrice: "₹5299", price: "₹4899", image: product3, discount: "10%" },
+    { id: 10, title: "Gold Chain Bracelet", price: "₹3799", image: product1, discount: "10%" },
+    { id: 11, title: "Everglow Crown Jewel", oldPrice: "₹8999", price: "₹7999", image: product2, discount: "10%" },
+    { id: 12, title: "Vintage Silver Ring", oldPrice: "₹2699", price: "₹2299", image: product3, discount: "10%" },
+    { id: 13, title: "Ruby Royal Necklace", oldPrice: "₹6499", price: "₹5999", image: product1, discount: "10%" },
+    { id: 14, title: "Emerald Stone Earrings", oldPrice: "₹3499", price: "₹3099", image: product2, discount: "10%" },
+    { id: 15, title: "Sapphire Gold Ring", oldPrice: "₹7299", price: "₹6899", image: product3, discount: "10%" },
+    { id: 16, title: "Pearl Anklet", price: "₹2999", image: product1, discount: "10%" },
+    { id: 17, title: "Kundan Bridal Set", oldPrice: "₹11999", price: "₹9999", image: product2, discount: "10%" },
+    { id: 18, title: "Designer Pendant Chain", oldPrice: "₹4599", price: "₹4199", image: product3, discount: "10%" },
+    { id: 19, title: "Temple Gold Necklace", oldPrice: "₹8999", price: "₹8499", image: product1, discount: "10%" },
+    { id: 20, title: "Rose Gold Ring", oldPrice: "₹3799", price: "₹3399", image: product2, discount: "10%" },
+    { id: 21, title: "Platinum Band", oldPrice: "₹13999", price: "₹12499", image: product3, discount: "10%" },
+    { id: 22, title: "Antique Silver Necklace", price: "₹4599", image: product1, discount: "10%" },
+    { id: 23, title: "Minimalist Chain", oldPrice: "₹2599", price: "₹2299", image: product2, discount: "10%" },
+    { id: 24, title: "Royal Diamond Set", oldPrice: "₹15999", price: "₹14999", image: product3, discount: "10%" },
+    { id: 25, title: "Floral Gold Earrings", oldPrice: "₹4999", price: "₹4599", image: product1, discount: "10%" },
   ];
 
+
   return (
-    <div className="px-4 sm:px-6 md:px-12 lg:px-20 py-12 space-y-16">
+    <div className="px-4 sm:px-6 md:px-10 lg:px-16 py-12 space-y-16 max-w-7xl mx-auto">
 
       {/* 🔹 First 8 Products */}
       <section>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.slice(0, 8).map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
@@ -609,29 +749,29 @@ const JewelryShowcase = () => {
       </section>
 
       {/* 🔹 New Collection */}
-      <section className="bg-white py-12 font-sans">
+      <section className="bg-white py-12">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900 mb-12 tracking-widest uppercase">
+          <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900 mb-12 tracking-wide uppercase">
             New Collection
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-            {/* Left Column */}
+            {/* Left */}
             <div className="flex flex-col gap-10">
-              <img src={new1} alt="Jewelry" className="w-full h-auto object-cover shadow-md rounded-lg" />
+              <img src={new1} alt="Jewelry" className="w-full h-auto object-cover shadow-lg rounded-xl" />
               <div className="flex flex-col sm:flex-row items-center gap-6">
                 <DiscoverBlock title="Jewelry Tells" subtitle="A Great Story" buttonText="Discover more" />
-                <img src={new3} alt="Bracelet" className="w-full sm:w-1/2 object-cover shadow-md rounded-lg" />
+                <img src={new3} alt="Bracelet" className="w-full sm:w-1/2 object-cover shadow-lg rounded-xl" />
               </div>
             </div>
 
-            {/* Right Column */}
+            {/* Right */}
             <div className="flex flex-col gap-10">
               <div className="flex flex-col sm:flex-row items-center gap-6">
-                <img src={new2} alt="Bracelet" className="w-full sm:w-1/2 object-cover shadow-md rounded-lg " />
+                <img src={new2} alt="Bracelet" className="w-full sm:w-1/2 object-cover shadow-lg rounded-xl" />
                 <DiscoverBlock title="Discover" subtitle="New Arrivals" buttonText="Discover more" />
               </div>
-              <img src={new4} alt="Pendant" className="w-full h-auto object-cover shadow-md rounded-lg" />
+              <img src={new4} alt="Pendant" className="w-full h-auto object-cover shadow-lg rounded-xl" />
             </div>
           </div>
         </div>
@@ -639,7 +779,7 @@ const JewelryShowcase = () => {
 
       {/* 🔹 Next 8 Products */}
       <section>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.slice(8, 16).map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
@@ -648,18 +788,17 @@ const JewelryShowcase = () => {
 
       {/* 🔹 Banner + Right Single Product */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-        {/* Left Banner */}
-        <div className="md:col-span-2 rounded-2xl overflow-hidden">
+        {/* Banner */}
+        <div className="md:col-span-2 rounded-2xl overflow-hidden shadow-lg">
           <img
             src={PromotionalBanner}
             alt="Promotional Banner"
-            className="w-full h-[320px] sm:h-[400px] md:h-[420px] object-cover"
+            className="w-full h-[260px] sm:h-[320px] md:h-[400px] object-cover"
             loading="lazy"
             decoding="async"
           />
         </div>
-
-        {/* Right Single Product */}
+        {/* Featured Product */}
         <div>
           <ProductCard product={products[0]} imageH="h-[180px] md:h-[250px]" />
         </div>
@@ -667,7 +806,7 @@ const JewelryShowcase = () => {
 
       {/* 🔹 Last 9 Products */}
       <section>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.slice(16, 25).map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

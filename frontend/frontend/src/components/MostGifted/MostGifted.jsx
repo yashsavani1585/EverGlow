@@ -206,6 +206,122 @@
 // }
 
 
+// import React from "react";
+// import earringImg from "../../assets/earrings1.png";
+// import necklaceImg from "../../assets/necklace1.png";
+// import ringImg from "../../assets/weddingRing1.png";
+
+// /** Reusable text block */
+// const GiftTextCard = ({ preHeading, heading, description }) => (
+//   <div className="flex flex-col justify-center p-4 sm:p-6 text-center md:text-left">
+//     <p className="uppercase text-xs tracking-widest text-gray-500 mb-2">
+//       {preHeading}
+//     </p>
+//     <h3
+//       style={{ fontFamily: "'Playfair Display', serif" }}
+//       className="text-[26px] sm:text-[30px] lg:text-[34px] leading-tight font-semibold text-[#4B2A4B] mb-3"
+//     >
+//       {heading}
+//     </h3>
+//     <p className="text-[15px] sm:text-base text-gray-600 leading-relaxed mb-4">
+//       {description}
+//     </p>
+//     <a
+//       href="#"
+//       className="text-sm text-[#4B2A4B] underline underline-offset-4 hover:no-underline"
+//     >
+//       Discover more
+//     </a>
+//   </div>
+// );
+
+// const MostGifted = () => {
+//   return (
+//     <section
+//       aria-labelledby="most-gifted-title"
+//       className="bg-white py-12 sm:py-16"
+//       style={{ fontFamily: "'Montserrat', sans-serif" }}
+//     >
+//       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+//         {/* Title */}
+//         <h2
+//           id="most-gifted-title"
+//           style={{ fontFamily: "'Playfair Display', serif" }}
+//           className="text-center text-[#4B2A4B] tracking-[0.2em] text-3xl sm:text-4xl font-bold mb-10 sm:mb-14"
+//         >
+//           MOST GIFTED
+//         </h2>
+//         <div className="w-[939px] [633px] mx-auto">
+//         {/* ===== Row 1: Image | Text | Image ===== */}
+//         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center mb-12">
+//           {/* Left Image */}
+//           <figure className="w-full">
+//             <img
+//               src={earringImg}
+//               alt="Elegant diamond earrings"
+//               loading="lazy"
+//               decoding="async"
+//               sizes="(max-width: 768px) 100vw, 33vw"
+//               className="w-full aspect-[4/3] object-cover rounded"
+//             />
+//           </figure>
+
+//           {/* Center Text */}
+//           <GiftTextCard
+//             preHeading="Timeless Beauty"
+//             heading="Elegant Earrings"
+//             description="Discover our exquisite collection of elegant earrings."
+//           />
+
+//           {/* Right Image */}
+//           <figure className="w-full">
+//             <img
+//               src={necklaceImg}
+//               alt="Luxury diamond necklace"
+//               loading="lazy"
+//               decoding="async"
+//               sizes="(max-width: 768px) 100vw, 33vw"
+//               className="w-full aspect-[4/3] object-cover rounded"
+//             />
+//           </figure>
+//         </div>
+
+//         {/* ===== Row 2: Text | Image | Text ===== */}
+//         <div className="grid grid-cols-1 md:grid-cols-3 gap-8  items-center">
+//           {/* Left Text */}
+//           <GiftTextCard
+//             preHeading="New Collection"
+//             heading="Wedding Rings"
+//             description="Celebrate your love with our stunning collection discover more."
+//           />
+
+//           {/* Center Image */}
+//           <figure className="w-full">
+//             <img
+//               src={ringImg}
+//               alt="Modern diamond ring"
+//               loading="lazy"
+//               decoding="async"
+//               sizes="(max-width: 768px) 100vw, 33vw"
+//               className="w-full aspect-[4/3] object-cover rounded"
+//             />
+//           </figure>
+
+//           {/* Right Text */}
+//           <GiftTextCard
+//             preHeading="Modern Charm"
+//             heading="Luxury Necklace"
+//             description="Elevate your elegance with our luxurious necklaces."
+//           />
+//         </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default MostGifted;
+
 import React from "react";
 import earringImg from "../../assets/earrings1.png";
 import necklaceImg from "../../assets/necklace1.png";
@@ -214,21 +330,21 @@ import ringImg from "../../assets/weddingRing1.png";
 /** Reusable text block */
 const GiftTextCard = ({ preHeading, heading, description }) => (
   <div className="flex flex-col justify-center p-4 sm:p-6 text-center md:text-left">
-    <p className="uppercase text-xs tracking-widest text-gray-500 mb-2">
+    <p className="uppercase text-xs sm:text-sm tracking-widest text-gray-500 mb-2">
       {preHeading}
     </p>
     <h3
       style={{ fontFamily: "'Playfair Display', serif" }}
-      className="text-[26px] sm:text-[30px] lg:text-[34px] leading-tight font-semibold text-[#4B2A4B] mb-3"
+      className="text-lg sm:text-2xl lg:text-[34px] leading-tight font-semibold text-[#4B2A4B] mb-3"
     >
       {heading}
     </h3>
-    <p className="text-[15px] sm:text-base text-gray-600 leading-relaxed mb-4">
+    <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4">
       {description}
     </p>
     <a
       href="#"
-      className="text-sm text-[#4B2A4B] underline underline-offset-4 hover:no-underline"
+      className="text-xs sm:text-sm text-[#4B2A4B] underline underline-offset-4 hover:no-underline"
     >
       Discover more
     </a>
@@ -239,21 +355,21 @@ const MostGifted = () => {
   return (
     <section
       aria-labelledby="most-gifted-title"
-      className="bg-white py-12 sm:py-16"
+      className="bg-white py-10 sm:py-14 md:py-20"
       style={{ fontFamily: "'Montserrat', sans-serif" }}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Title */}
         <h2
           id="most-gifted-title"
           style={{ fontFamily: "'Playfair Display', serif" }}
-          className="text-center text-[#4B2A4B] tracking-[0.2em] text-3xl sm:text-4xl font-bold mb-10 sm:mb-14"
+          className="text-center text-[#4B2A4B] tracking-[0.2em] text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 md:mb-16"
         >
           MOST GIFTED
         </h2>
-        <div className="w-[939px] [633px] mx-auto">
+
         {/* ===== Row 1: Image | Text | Image ===== */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-center mb-10 sm:mb-14">
           {/* Left Image */}
           <figure className="w-full">
             <img
@@ -261,7 +377,6 @@ const MostGifted = () => {
               alt="Elegant diamond earrings"
               loading="lazy"
               decoding="async"
-              sizes="(max-width: 768px) 100vw, 33vw"
               className="w-full aspect-[4/3] object-cover rounded"
             />
           </figure>
@@ -280,14 +395,13 @@ const MostGifted = () => {
               alt="Luxury diamond necklace"
               loading="lazy"
               decoding="async"
-              sizes="(max-width: 768px) 100vw, 33vw"
               className="w-full aspect-[4/3] object-cover rounded"
             />
           </figure>
         </div>
 
         {/* ===== Row 2: Text | Image | Text ===== */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8  items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-center">
           {/* Left Text */}
           <GiftTextCard
             preHeading="New Collection"
@@ -302,7 +416,6 @@ const MostGifted = () => {
               alt="Modern diamond ring"
               loading="lazy"
               decoding="async"
-              sizes="(max-width: 768px) 100vw, 33vw"
               className="w-full aspect-[4/3] object-cover rounded"
             />
           </figure>
@@ -313,7 +426,6 @@ const MostGifted = () => {
             heading="Luxury Necklace"
             description="Elevate your elegance with our luxurious necklaces."
           />
-        </div>
         </div>
       </div>
     </section>

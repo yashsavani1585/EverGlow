@@ -41,8 +41,8 @@ const CategorySection = () => {
         </p>
       </div>
 
-      {/* --- Mobile Slider --- */}
-      <div className="block md:hidden relative">
+      {/* --- Mobile + Tablet Slider (sm–lg) --- */}
+      <div className="block xl:hidden relative">
         {/* Slider Container */}
         <div className="overflow-hidden">
           <div
@@ -55,14 +55,14 @@ const CategorySection = () => {
                 className="w-1/2 flex-shrink-0 flex flex-col items-center text-center px-2"
               >
                 <Link to={cat.link}>
-                  <div className="w-32 h-32 sm:w-36 sm:h-36 overflow-hidden rounded-2xl shadow-md">
+                  <div className="w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 overflow-hidden rounded-2xl shadow-md">
                     <img
                       src={cat.img}
                       alt={cat.title}
                       className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                     />
                   </div>
-                  <p className="mt-3 text-sm font-medium text-purple-900">
+                  <p className="mt-3 text-sm md:text-base font-medium text-purple-900">
                     {cat.title}
                   </p>
                 </Link>
@@ -72,31 +72,31 @@ const CategorySection = () => {
         </div>
 
         {/* Arrows Below */}
-        <div className="flex justify-center items-center gap-6 mt-4">
+        <div className="flex justify-center items-center gap-6 mt-6">
           <button
             onClick={prevSlide}
             className="bg-white shadow-md p-3 rounded-full hover:bg-purple-100"
           >
-            <FaChevronLeft className="text-purple-900" />
+            <FaChevronLeft className="text-purple-900 text-lg sm:text-xl" />
           </button>
           <button
             onClick={nextSlide}
             className="bg-white shadow-md p-3 rounded-full hover:bg-purple-100"
           >
-            <FaChevronRight className="text-purple-900" />
+            <FaChevronRight className="text-purple-900 text-lg sm:text-xl" />
           </button>
         </div>
       </div>
 
-      {/* --- Desktop Grid --- */}
-      <div className="hidden md:grid max-w-6xl mx-auto grid-cols-3 lg:grid-cols-5 gap-8">
+      {/* --- Desktop Grid (xl+) --- */}
+      <div className="hidden xl:grid max-w-7xl mx-auto grid-cols-3 lg:grid-cols-5 gap-8">
         {categories.map((cat) => (
           <Link
             key={cat.id}
             to={cat.link}
             className="flex flex-col items-center text-center group"
           >
-            <div className="w-36 h-36 md:w-44 md:h-44 overflow-hidden rounded-2xl shadow-md">
+            <div className="w-40 h-40 xl:w-44 xl:h-44 overflow-hidden rounded-2xl shadow-md">
               <img
                 src={cat.img}
                 alt={cat.title}
