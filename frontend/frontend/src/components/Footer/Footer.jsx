@@ -166,29 +166,21 @@ import {
   FaPinterestP,
 } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
-import bgurl from "../../assets/bgurl.png"; // 🔹 Background image
-import Logo from "../../assets/EverGlow1.png"; // 🔹 Logo
+import bgurl from "../../assets/bgurl.png";
+import Logo from "../../assets/EverGlow1.png";
 
 export default function Footer() {
   return (
     <footer
-      className="text-white py-14 px-6"
-      style={{
-        backgroundImage: `url(${bgurl})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      className="text-white py-14 px-6 bg-cover bg-center"
+      style={{ backgroundImage: `url(${bgurl})` }}
     >
-      {/* 🔹 Main Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12">
+      {/* Main Grid */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 text-center md:text-left">
         {/* 1. About + Logo + Social */}
-        <div className="text-center md:text-left">
-          <img
-            src={Logo}
-            alt="EverGlow Logo"
-            className="w-[160px] h-auto mx-auto md:mx-0"
-          />
-          <p className="text-sm leading-relaxed mb-4 mt-3 max-w-[240px] mx-auto md:mx-0">
+        <div className="flex flex-col items-center md:items-start">
+          <img src={Logo} alt="EverGlow Logo" className="w-[160px] h-auto mb-3" />
+          <p className="text-sm leading-relaxed mb-4 max-w-[240px]">
             At EverGlow, we believe that Jewellery is more than adornment.
             Founded in 2023, our passion for quality drives us to create unique
             pieces.
@@ -273,25 +265,19 @@ export default function Footer() {
         </div>
 
         {/* 5. Newsletter */}
-        <div className="max-w-xl mx-auto text-center md:text-left">
-          {/* Heading */}
-          <h3 className="uppercase text-sm tracking-widest mb-2 text-white">
-            Newsletter
-          </h3>
-          <p className="text-3xl font-serif mb-6 text-white">Join Today</p>
+        <div className="flex flex-col items-center md:items-start">
+          <h3 className="uppercase text-sm tracking-widest mb-2">Newsletter</h3>
+          <p className="text-3xl font-serif mb-6">Join Today</p>
 
-          {/* Email Input + Button */}
-          <form className="flex items-center border border-white rounded-full overflow-hidden max-w-md mx-auto md:mx-0">
+          <form className="flex items-center w-full max-w-md border border-white rounded-full overflow-hidden">
             <input
               type="email"
               placeholder="Enter your Email here"
-              className="bg-transparent flex-1 px-5 py-3 text-base text-white placeholder-white outline-none"
-              aria-label="Email for newsletter"
+              className="bg-transparent flex-1 px-5 py-3 text-base placeholder-white outline-none"
             />
             <button
               type="submit"
               className="flex items-center justify-center w-12 h-12 mr-2 m-1 rounded-full bg-white text-[#451c51] hover:bg-[#451c51] hover:text-black transition"
-              aria-label="Subscribe to newsletter"
             >
               <IoIosArrowForward size={22} />
             </button>
@@ -299,7 +285,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* 🔹 Bottom Copyright */}
+      {/* Bottom Copyright */}
       <div className="mt-12 border-t border-white/50 pt-4 text-center text-xs md:text-sm">
         © {new Date().getFullYear()} EverGlow. All Rights Reserved.
       </div>

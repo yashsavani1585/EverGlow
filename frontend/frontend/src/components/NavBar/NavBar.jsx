@@ -120,6 +120,15 @@ const NavBar = ({ onLinkClick, mobile = false }) => {
       {/* Desktop Navbar */}
       {!mobile && (
         <div className="flex justify-center items-center space-x-12 p-4 md:px-10">
+          {/* Home Link */}
+          <Link
+            to="/"
+            className="hover:text-[#a02ca5] transition-colors"
+            onClick={onLinkClick}
+          >
+            Home
+          </Link>
+
           {/* Shop by Category Dropdown */}
           <div className="relative" ref={dropdownRef}>
             <button
@@ -127,61 +136,64 @@ const NavBar = ({ onLinkClick, mobile = false }) => {
               className="flex items-center space-x-1 hover:text-[#a02ca5] transition-colors"
             >
               <span>Shop by Category</span>
-              {isOpen ? <FaChevronUp className="text-xs" /> : <FaChevronDown className="text-xs" />}
+              {isOpen ? (
+                <FaChevronUp className="text-xs" />
+              ) : (
+                <FaChevronDown className="text-xs" />
+              )}
             </button>
             {isOpen && (
               <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg border rounded-md z-20 animate-fadeIn">
                 <ul className="flex flex-col text-[#4f1c51] font-semibold">
-                  <li className="px-4 py-2 hover:bg-gray-100">
-                    <Link
-                      to="/rings"
-                      onClick={() => { onLinkClick?.(); setIsOpen(false); }}
+                  {[
+                    { name: "RINGS", path: "/rings" },
+                    { name: "EARRINGS", path: "/earrings" },
+                    { name: "BRACELET", path: "/bracelet" },
+                    { name: "NECKLACE", path: "/necklace" },
+                    { name: "PENDANT SET", path: "/pendantset" },
+                  ].map((item, i) => (
+                    <li
+                      key={i}
+                      className="px-4 py-2 hover:bg-gray-100"
                     >
-                      RINGS
-                    </Link>
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-100">
-                    <Link
-                      to="/earrings"
-                      onClick={() => { onLinkClick?.(); setIsOpen(false); }}
-                    >
-                      EARRINGS
-                    </Link>
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-100">
-                    <Link
-                      to="/bracelet"
-                      onClick={() => { onLinkClick?.(); setIsOpen(false); }}
-                    >
-                      BRACELET
-                    </Link>
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-100">
-                    <Link
-                      to="/necklace"
-                      onClick={() => { onLinkClick?.(); setIsOpen(false); }}
-                    >
-                      NECKLACE
-                    </Link>
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-100">
-                    <Link
-                      to="/pendantset"
-                      onClick={() => { onLinkClick?.(); setIsOpen(false); }}
-                    >
-                      PENDANT SET
-                    </Link>
-                  </li>
+                      <Link
+                        to={item.path}
+                        onClick={() => {
+                          onLinkClick?.();
+                          setIsOpen(false);
+                        }}
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
-
               </div>
             )}
           </div>
 
           {/* Static Links */}
-          <Link to="/giftstore" className="hover:text-[#a02ca5] transition-colors" onClick={onLinkClick}>Gift Store</Link>
-          <Link to="/personalized" className="hover:text-[#a02ca5] transition-colors" onClick={onLinkClick}>Personalized Jewelry</Link>
-          <Link to="/collections" className="hover:text-[#a02ca5] transition-colors" onClick={onLinkClick}>Latest Collections</Link>
+          <Link
+            to="/giftstore"
+            className="hover:text-[#a02ca5] transition-colors"
+            onClick={onLinkClick}
+          >
+            Gift Store
+          </Link>
+          <Link
+            to="/personalized"
+            className="hover:text-[#a02ca5] transition-colors"
+            onClick={onLinkClick}
+          >
+            Personalized Jewelry
+          </Link>
+          <Link
+            to="/collections"
+            className="hover:text-[#a02ca5] transition-colors"
+            onClick={onLinkClick}
+          >
+            Latest Collections
+          </Link>
         </div>
       )}
 
@@ -198,6 +210,13 @@ const NavBar = ({ onLinkClick, mobile = false }) => {
 
           {/* Links */}
           <ul className="pt-12 space-y-5 font-semibold px-4">
+            {/* Home Link */}
+            <li>
+              <Link to="/" onClick={onLinkClick} className="hover:text-[#a02ca5]">
+                Home
+              </Link>
+            </li>
+
             {/* Shop by Category */}
             <li>
               <button
@@ -209,23 +228,42 @@ const NavBar = ({ onLinkClick, mobile = false }) => {
               </button>
               {isOpen && (
                 <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-700 animate-fadeIn">
-                  <li><Link to="/rings" onClick={onLinkClick}>RINGS</Link></li>
-                  <li><Link to="/earrings" onClick={onLinkClick}>EARRINGS</Link></li>
-                  <li><Link to="/bracelet" onClick={onLinkClick}>BRACELET</Link></li>
-                  <li><Link to="/necklace" onClick={onLinkClick}>NECKLACE</Link></li>
-                  <li><Link to="/pendantset" onClick={onLinkClick}>PENDANT SET</Link></li>
+                  {[
+                    { name: "RINGS", path: "/rings" },
+                    { name: "EARRINGS", path: "/earrings" },
+                    { name: "BRACELET", path: "/bracelet" },
+                    { name: "NECKLACE", path: "/necklace" },
+                    { name: "PENDANT SET", path: "/pendantset" },
+                  ].map((item, i) => (
+                    <li key={i}>
+                      <Link to={item.path} onClick={onLinkClick}>
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               )}
             </li>
 
             {/* Other Links */}
-            <li><Link to="/giftstore" onClick={onLinkClick}>Gift Store</Link></li>
-            <li><Link to="/personalized" onClick={onLinkClick}>Personalized Jewelry</Link></li>
-            <li><Link to="/collections" onClick={onLinkClick}>Latest Collections</Link></li>
+            <li>
+              <Link to="/giftstore" onClick={onLinkClick}>
+                Gift Store
+              </Link>
+            </li>
+            <li>
+              <Link to="/personalized" onClick={onLinkClick}>
+                Personalized Jewelry
+              </Link>
+            </li>
+            <li>
+              <Link to="/collections" onClick={onLinkClick}>
+                Latest Collections
+              </Link>
+            </li>
           </ul>
         </div>
       )}
-
     </nav>
   );
 };
