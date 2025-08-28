@@ -27,6 +27,7 @@ import BRACELETPage from "./Page/BRACELET/BRACELETPage";
 import NECKLACEPage from "./Page/NECKLACE/NECKLACEPage";
 import Pendantset from "./Page/Pendantset/Pendantset";
 import WishlistPage from "./Page/WishlistPage/WishlistPage";
+import MoreInfo2 from "./components/MoreInfo2/MoreInfo2";
 
 
 
@@ -61,6 +62,7 @@ const App = () => {
           <Route path="/necklace" element={<NECKLACEPage/>} />
           <Route path="/pendantset" element={<Pendantset/>} />
           <Route path="/Wishlist" element={<WishlistPage/>}/>
+          <Route path="/moreinfo2" element={<MoreInfo2/>}/>
 
 
         </Routes>
