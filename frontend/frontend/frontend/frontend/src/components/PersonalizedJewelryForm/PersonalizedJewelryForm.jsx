@@ -17,13 +17,13 @@ const PersonalizedJewelryForm = () => {
             type="text"
             placeholder="Name*"
             required
-            className="w-full border rounded-md px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none"
+            className="w-full border rounded-md px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none placeholder-purple-700"
           />
           <input
             type="tel"
             placeholder="Mobile Number*"
             required
-            className="w-full border rounded-md px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none"
+            className="w-full border rounded-md px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none placeholder-purple-700"
           />
         </div>
 
@@ -32,33 +32,45 @@ const PersonalizedJewelryForm = () => {
           type="email"
           placeholder="Email Address*"
           required
-          className="w-full border rounded-md px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none"
+          className="w-full border rounded-md px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none placeholder-purple-700"
         />
 
         {/* Row 3 */}
         <select
           required
-          className="w-full border rounded-md px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none"
+          className="w-full border rounded-md px-4 py-3 outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-black"
         >
-          <option value="">Choose Type</option>
-          <option value="ring">Ring</option>
-          <option value="necklace">Necklace</option>
-          <option value="bracelet">Bracelet</option>
-          <option value="earrings">Earrings</option>
+          <option value="" disabled selected className="text-purple-700">
+            Choose Type
+          </option>
+          <option value="ring" className="text-purple-700" >Ring</option>
+          <option value="necklace" className="text-purple-700">Necklace</option>
+          <option value="bracelet" className="text-purple-700">Bracelet</option>
+          <option value="earrings" className="text-purple-700">Earrings</option>
         </select>
+
 
         {/* Row 4 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <input
             type="text"
             placeholder="Total Budget"
-            className="w-full border rounded-md px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none"
+            className="w-full border rounded-md px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none placeholder-purple-700"
           />
-          <input
-            type="text"
-            placeholder="Metal Type"
-            className="w-full border rounded-md px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none"
-          />
+          <select
+            required
+            className="w-full border rounded-md px-4 py-3 outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-black"
+            defaultValue=""
+          >
+            <option value="" disabled className="text-purple-700">
+              Metal Type
+            </option>
+            <option value="gold" className="text-black">Gold</option>
+            <option value="silver" className="text-black">Silver</option>
+            <option value="platinum" className="text-black">Platinum</option>
+            <option value="rose-gold" className="text-black">Rose Gold</option>
+          </select>
+
         </div>
 
         {/* File Upload */}
@@ -84,7 +96,7 @@ const PersonalizedJewelryForm = () => {
         <textarea
           rows="4"
           placeholder="Please describe your idea for this Custom Project..."
-          className="w-full border rounded-md px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none"
+          className="w-full border rounded-md px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none placeholder-purple-700"
         ></textarea>
 
         {/* Submit Button */}

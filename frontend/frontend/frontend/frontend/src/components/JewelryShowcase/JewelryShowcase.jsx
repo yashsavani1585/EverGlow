@@ -682,8 +682,8 @@
 import React from "react";
 
 import product1 from "../../assets/productImg.png";
-import product2 from "../../assets/productImg.png";
-import product3 from "../../assets/productImg.png";
+import product2 from "../../assets/EverglowPost2.png";
+import product3 from "../../assets/EverglowPost3.png";
 
 import new1 from "../../assets/EverglowPost1.png";
 import new2 from "../../assets/EverglowPost2.png";
@@ -708,31 +708,230 @@ const DiscoverBlock = ({ title, subtitle, buttonText }) => (
 
 const JewelryShowcase = () => {
   const products = [
-    { id: 1, title: "Brilliant Round cut Everglow jewels", oldPrice: "₹3299", price: "₹2699", image: product1, discount: "10%" },
-    { id: 2, title: "Elegant Gold Necklace", oldPrice: "₹4999", price: "₹4599", image: product2, discount: "10%" },
-    { id: 3, title: "Classic Diamond Ring", oldPrice: "₹5999", price: "₹5599", image: product3, discount: "10%" },
-    { id: 4, title: "Royal Silver Bracelet", price: "₹3599", image: product1, discount: "10%" },
-    { id: 5, title: "Stylish Diamond Earrings", oldPrice: "₹3999", price: "₹3499", image: product2, discount: "10%" },
-    { id: 6, title: "Modern Gold Bangles", oldPrice: "₹4499", price: "₹4099", image: product3, discount: "10%" },
-    { id: 7, title: "Luxury Platinum Ring", oldPrice: "₹9999", price: "₹8999", image: product1, discount: "10%" },
-    { id: 8, title: "Pearl Pendant Necklace", oldPrice: "₹4599", price: "₹4199", image: product2, discount: "10%" },
-    { id: 9, title: "Diamond Stud Earrings", oldPrice: "₹5299", price: "₹4899", image: product3, discount: "10%" },
-    { id: 10, title: "Gold Chain Bracelet", price: "₹3799", image: product1, discount: "10%" },
-    { id: 11, title: "Everglow Crown Jewel", oldPrice: "₹8999", price: "₹7999", image: product2, discount: "10%" },
-    { id: 12, title: "Vintage Silver Ring", oldPrice: "₹2699", price: "₹2299", image: product3, discount: "10%" },
-    { id: 13, title: "Ruby Royal Necklace", oldPrice: "₹6499", price: "₹5999", image: product1, discount: "10%" },
-    { id: 14, title: "Emerald Stone Earrings", oldPrice: "₹3499", price: "₹3099", image: product2, discount: "10%" },
-    { id: 15, title: "Sapphire Gold Ring", oldPrice: "₹7299", price: "₹6899", image: product3, discount: "10%" },
-    { id: 16, title: "Pearl Anklet", price: "₹2999", image: product1, discount: "10%" },
-    { id: 17, title: "Kundan Bridal Set", oldPrice: "₹11999", price: "₹9999", image: product2, discount: "10%" },
-    { id: 18, title: "Designer Pendant Chain", oldPrice: "₹4599", price: "₹4199", image: product3, discount: "10%" },
-    { id: 19, title: "Temple Gold Necklace", oldPrice: "₹8999", price: "₹8499", image: product1, discount: "10%" },
-    { id: 20, title: "Rose Gold Ring", oldPrice: "₹3799", price: "₹3399", image: product2, discount: "10%" },
-    { id: 21, title: "Platinum Band", oldPrice: "₹13999", price: "₹12499", image: product3, discount: "10%" },
-    { id: 22, title: "Antique Silver Necklace", price: "₹4599", image: product1, discount: "10%" },
-    { id: 23, title: "Minimalist Chain", oldPrice: "₹2599", price: "₹2299", image: product2, discount: "10%" },
-    { id: 24, title: "Royal Diamond Set", oldPrice: "₹15999", price: "₹14999", image: product3, discount: "10%" },
-    { id: 25, title: "Floral Gold Earrings", oldPrice: "₹4999", price: "₹4599", image: product1, discount: "10%" },
+    {
+      id: 1,
+      title: "Brilliant Round cut Everglow jewels",
+      oldPrice: "₹3299",
+      price: "₹2699",
+      image: product1,
+      hoverImg: product2, // 🔹 Add hover image
+      discount: "10%",
+    },
+    {
+      id: 2,
+      title: "Elegant Gold Necklace",
+      oldPrice: "₹4999",
+      price: "₹4599",
+      image: product2,
+      hoverImg: product3, // 🔹 Add hover image
+      discount: "10%",
+    },
+    {
+      id: 3,
+      title: "Classic Diamond Ring",
+      oldPrice: "₹5999",
+      price: "₹5599",
+      image: product3,
+      hoverImg: product1,
+      discount: "10%",
+    },
+    {
+      id: 4,
+      title: "Brilliant Round cut Everglow jewels",
+      oldPrice: "₹3299",
+      price: "₹2699",
+      image: product1,
+      hoverImg: product2, // 🔹 Add hover image
+      discount: "10%",
+    },
+    {
+      id: 5,
+      title: "Elegant Gold Necklace",
+      oldPrice: "₹4999",
+      price: "₹4599",
+      image: product2,
+      hoverImg: product3, // 🔹 Add hover image
+      discount: "10%",
+    },
+    {
+      id: 6,
+      title: "Classic Diamond Ring",
+      oldPrice: "₹5999",
+      price: "₹5599",
+      image: product3,
+      hoverImg: product1,
+      discount: "10%",
+    },
+    {
+      id: 7,
+      title: "Brilliant Round cut Everglow jewels",
+      oldPrice: "₹3299",
+      price: "₹2699",
+      image: product1,
+      hoverImg: product2, // 🔹 Add hover image
+      discount: "10%",
+    },
+    {
+      id: 8,
+      title: "Elegant Gold Necklace",
+      oldPrice: "₹4999",
+      price: "₹4599",
+      image: product2,
+      hoverImg: product3, // 🔹 Add hover image
+      discount: "10%",
+    },
+    {
+      id: 9,
+      title: "Classic Diamond Ring",
+      oldPrice: "₹5999",
+      price: "₹5599",
+      image: product3,
+      hoverImg: product1,
+      discount: "10%",
+    },
+    {
+      id: 10,
+      title: "Brilliant Round cut Everglow jewels",
+      oldPrice: "₹3299",
+      price: "₹2699",
+      image: product1,
+      hoverImg: product2, // 🔹 Add hover image
+      discount: "10%",
+    },
+    {
+      id: 11,
+      title: "Elegant Gold Necklace",
+      oldPrice: "₹4999",
+      price: "₹4599",
+      image: product2,
+      hoverImg: product3, // 🔹 Add hover image
+      discount: "10%",
+    },
+    {
+      id: 12,
+      title: "Classic Diamond Ring",
+      oldPrice: "₹5999",
+      price: "₹5599",
+      image: product3,
+      hoverImg: product1,
+      discount: "10%",
+    },
+    {
+      id: 13,
+      title: "Brilliant Round cut Everglow jewels",
+      oldPrice: "₹3299",
+      price: "₹2699",
+      image: product1,
+      hoverImg: product2, // 🔹 Add hover image
+      discount: "10%",
+    },
+    {
+      id: 14,
+      title: "Elegant Gold Necklace",
+      oldPrice: "₹4999",
+      price: "₹4599",
+      image: product2,
+      hoverImg: product3, // 🔹 Add hover image
+      discount: "10%",
+    },
+    {
+      id: 15,
+      title: "Classic Diamond Ring",
+      oldPrice: "₹5999",
+      price: "₹5599",
+      image: product3,
+      hoverImg: product1,
+      discount: "10%",
+    },
+    {
+      id: 16,
+      title: "Brilliant Round cut Everglow jewels",
+      oldPrice: "₹3299",
+      price: "₹2699",
+      image: product1,
+      hoverImg: product2, // 🔹 Add hover image
+      discount: "10%",
+    },
+    {
+      id: 17,
+      title: "Elegant Gold Necklace",
+      oldPrice: "₹4999",
+      price: "₹4599",
+      image: product2,
+      hoverImg: product3, // 🔹 Add hover image
+      discount: "10%",
+    },
+    {
+      id: 18,
+      title: "Classic Diamond Ring",
+      oldPrice: "₹5999",
+      price: "₹5599",
+      image: product3,
+      hoverImg: product1,
+      discount: "10%",
+    }, {
+      id: 19,
+      title: "Brilliant Round cut Everglow jewels",
+      oldPrice: "₹3299",
+      price: "₹2699",
+      image: product1,
+      hoverImg: product2, // 🔹 Add hover image
+      discount: "10%",
+    },
+    {
+      id: 20,
+      title: "Elegant Gold Necklace",
+      oldPrice: "₹4999",
+      price: "₹4599",
+      image: product2,
+      hoverImg: product3, // 🔹 Add hover image
+      discount: "10%",
+    },
+    {
+      id: 21,
+      title: "Classic Diamond Ring",
+      oldPrice: "₹5999",
+      price: "₹5599",
+      image: product3,
+      hoverImg: product1,
+      discount: "10%",
+    },
+    {
+      id: 22,
+      title: "Brilliant Round cut Everglow jewels",
+      oldPrice: "₹3299",
+      price: "₹2699",
+      image: product1,
+      hoverImg: product2, // 🔹 Add hover image
+      discount: "10%",
+    },
+    {
+      id: 23,
+      title: "Elegant Gold Necklace",
+      oldPrice: "₹4999",
+      price: "₹4599",
+      image: product2,
+      hoverImg: product3, // 🔹 Add hover image
+      discount: "10%",
+    },
+    {
+      id: 24,
+      title: "Classic Diamond Ring",
+      oldPrice: "₹5999",
+      price: "₹5599",
+      image: product3,
+      hoverImg: product1,
+      discount: "10%",
+    },
+    {
+      id: 25,
+      title: "Brilliant Round cut Everglow jewels",
+      oldPrice: "₹3299",
+      price: "₹2699",
+      image: product1,
+      hoverImg: product2, // 🔹 Add hover image
+      discount: "10%",
+    },
   ];
 
 
