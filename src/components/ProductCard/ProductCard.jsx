@@ -270,7 +270,7 @@ const ProductCard = ({ product, imageH = "h-[150px] md:h-[200px]" }) => {
         {/* Buttons */}
         <div className="mt-auto flex gap-2">
           {/* More Info Button */}
-          <Link to="/moreInform" className="flex-1">
+          <Link to="/moreinfo2" className="flex-1">
             <button className="w-full border border-[#4f1c51] text-black text-sm font-medium py-2 px-3 rounded-xl hover:bg-purple-50 transition">
               More Info
             </button>

@@ -295,7 +295,7 @@
 
 //       {/* Main Content */}
 //       <div className="relative z-10 flex flex-col items-center justify-center p-4 text-center">
-        
+
 //         {/* LEFT IMAGE → bottom left */}
 //         <div className="hidden md:block absolute right-200 top-50">
 //           <img
@@ -360,7 +360,7 @@
 
 //       {/* Main Content */}
 //       <div className="relative z-10 flex flex-col items-center justify-center p-4 text-center">
-        
+
 //         {/* LEFT IMAGE → bottom left corner */}
 //         <div className="hidden md:block absolute left-[10%] bottom-[20%]">
 //           <img
@@ -425,7 +425,7 @@
 
 //       {/* Main Content */}
 //       <div className="relative z-10 flex flex-col items-center justify-center p-10 text-center">
-        
+
 //         {/* LEFT IMAGE → exactly at left grid cross (bottom) */}
 //         <div className="hidden md:block absolute mr-[80%] top-[75%] -translate-x-1/2 translate-y-1/2">
 //           <img
@@ -464,18 +464,212 @@
 
 // export default TestimonialSection;
 
-import React from "react";
+// import React from "react";
+// import leftImg from "../../assets/testimonial-left.png";
+// import rightImg from "../../assets/testimonial-right.png";
+
+// const TestimonialSection = () => {
+//   return (
+//     <section className="relative flex flex-col items-center justify-center min-h-screen p-6 sm:p-8 lg:p-12 overflow-hidden bg-[#4C1242] font-['Inter']">
+//       {/* Grid Lines */}
+//       <div className="absolute top-[20%] left-0 h-px w-[90%] bg-white"></div>
+//       <div className="absolute bottom-[20%] left-0 h-px ml-25 w-full bg-white"></div>
+//       <div className="absolute top-36 left-[22%] w-px h-full bg-white hidden md:block"></div>
+//       <div className="absolute bottom-36 right-[22%] w-px h-full bg-white hidden md:block"></div>
+
+//       {/* Decorative Stars */}
+//       <svg
+//         className="absolute top-8 left-8 w-12 h-12 text-white sm:w-16 sm:h-16"
+//         viewBox="0 0 24 24"
+//         fill="none"
+//         stroke="currentColor"
+//         strokeWidth="1"
+//       >
+//         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+//       </svg>
+
+//       <svg
+//         className="absolute bottom-16 right-16 w-8 h-8 text-white sm:w-12 sm:h-12"
+//         viewBox="0 0 24 24"
+//         fill="none"
+//         stroke="currentColor"
+//         strokeWidth="1"
+//       >
+//         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+//       </svg>
+
+//       <svg
+//         className="absolute bottom-0 right-0 w-32 h-32 sm:w-40 sm:h-40 text-white translate-x-1/2 translate-y-1/2"
+//         viewBox="0 0 24 24"
+//         fill="none"
+//         stroke="currentColor"
+//         strokeWidth="1"
+//       >
+//         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+//       </svg>
+
+//       {/* Main Content */}
+//       <div className="relative z-10 flex flex-col items-center justify-center text-center px-1 sm:px-6 lg:px-50 py-10 sm:py-16">
+//         {/* LEFT IMAGE → bottom left grid cross */}
+// <div className="hidden md:block absolute left-0 bottom-0 transform -translate-x-1/2 translate-y-1/2 sm:left-[10%] lg:left-[15%] sm:bottom-[25%] lg:bottom-[30%]">
+//           <img
+//             src={leftImg}
+//             alt="Customer wearing jewelry"
+//             className="w-28 h-28 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mt-70 object-cover rounded-md shadow-2xl border-2 border-white"
+//           />
+//         </div>
+
+//         {/* QUOTE */}
+//         <blockquote className="max-w-3xl mb-8 px-4 sm:px-6">
+//           <p className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif leading-relaxed font-semibold">
+//             “Beautiful Jewellery and amazing Quality I Would definitely Purchase More!”
+//           </p>
+//         </blockquote>
+
+//         {/* DOTS */}
+//         <div className="flex gap-2 justify-center mb-6">
+//           <span className="w-2 h-2 rounded-full bg-white"></span>
+//           <span className="w-2 h-2 rounded-full bg-white opacity-50"></span>
+//           <span className="w-2 h-2 rounded-full bg-white opacity-50"></span>
+//         </div>
+
+//         {/* RIGHT IMAGE → top right grid cross */}
+// <div className="hidden md:block absolute right-0 top-0 transform translate-x-1/2 -translate-y-1/2 sm:right-[10%] lg:right-[15%] sm:top-[20%] lg:top-[15%]">
+//           <img
+//             src={rightImg}
+//             alt="Customer wearing jewelry"
+//             className="w-28 h-28 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mb-50 object-cover rounded-md shadow-2xl border-2 border-white"
+//           />
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default TestimonialSection;
+
+// import React, { useState, useEffect } from "react";
+// import leftImg from "../../assets/testimonial-left.png";
+// import rightImg from "../../assets/testimonial-right.png";
+
+// const reviews = [
+//   "Beautiful Jewellery and amazing Quality! I would definitely purchase more!",
+//   "Amazing designs and excellent customer service. Highly recommended!",
+//   "The quality is top-notch and delivery was super fast. Loved it!"
+// ];
+
+// const TestimonialSection = () => {
+//   const [currentReview, setCurrentReview] = useState(0);
+
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setCurrentReview((prev) => (prev + 1) % reviews.length);
+//     }, 4000); // change review every 4 sec
+//     return () => clearInterval(interval);
+//   }, []);
+
+//   return (
+//     <section className="relative flex flex-col items-center justify-center min-h-screen p-6 sm:p-8 lg:p-12 overflow-hidden bg-[#4C1242] font-['Inter']">
+//       {/* Grid Lines */}
+//       <div className="absolute top-[20%] left-0 h-px w-[90%] bg-white"></div>
+//       <div className="absolute bottom-[20%] left-0 h-px w-full bg-white"></div>
+//       <div className="absolute top-36 left-[22%] w-px h-full bg-white hidden md:block"></div>
+//       <div className="absolute bottom-36 right-[22%] w-px h-full bg-white hidden md:block"></div>
+
+//       {/* Decorative Stars */}
+//       <svg
+//         className="absolute top-8 left-8 w-12 h-12 text-white sm:w-16 sm:h-16"
+//         viewBox="0 0 24 24"
+//         fill="none"
+//         stroke="currentColor"
+//         strokeWidth="1"
+//       >
+//         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+//       </svg>
+
+//       <svg
+//         className="absolute bottom-16 right-16 w-8 h-8 text-white sm:w-12 sm:h-12"
+//         viewBox="0 0 24 24"
+//         fill="none"
+//         stroke="currentColor"
+//         strokeWidth="1"
+//       >
+//         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+//       </svg>
+
+//       {/* Main Content */}
+//       <div className="relative z-10 flex flex-col items-center justify-center text-center px-1 sm:px-6 lg:px-50 py-10 sm:py-16 gap-10">
+//         {/* Left Image */}
+//         <div className="hidden md:block absolute left-0 bottom-0 transform -translate-x-1/2 translate-y-1/2 sm:left-[10%] lg:left-[15%] sm:bottom-[25%] lg:bottom-[30%]">
+//           <img
+//             src={leftImg}
+//             alt="Customer"
+//             className="w-28 h-28 sm:w-36 mt-70 sm:h-36 lg:w-40 lg:h-40 object-cover rounded-md shadow-2xl border-2 border-white"
+//           />
+//         </div>
+
+
+//         {/* Quote */}
+//         <blockquote className="max-w-3xl px-4 sm:px-6">
+//           <p className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif leading-relaxed font-semibold">
+//             {reviews[currentReview]}
+//           </p>
+//         </blockquote>
+
+//         {/* Right Image */}
+//         <div className="hidden md:block absolute right-0 top-0 transform translate-x-1/2 -translate-y-1/2 sm:right-[10%] lg:right-[15%] sm:top-[20%] lg:top-[15%]">
+//           <img
+//             src={rightImg}
+//             alt="Customer"
+//             className="w-28 h-28 mb-50 sm:w-36 sm:h-36 lg:w-40 lg:h-40 object-cover rounded-md shadow-2xl border-2 border-white"
+//           />
+//         </div>
+
+
+//         {/* Dots */}
+//         <div className="flex gap-2 justify-center mt-6">
+//           {reviews.map((_, index) => (
+//             <span
+//               key={index}
+//               className={`w-2 h-2 rounded-full ${currentReview === index ? "bg-white" : "bg-white opacity-50"
+//                 }`}
+//             ></span>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default TestimonialSection;
+
+import React, { useState, useEffect } from "react";
 import leftImg from "../../assets/testimonial-left.png";
 import rightImg from "../../assets/testimonial-right.png";
 
+const reviews = [
+  "Beautiful Jewellery and amazing Quality! I would definitely purchase more!",
+  "Amazing designs and excellent customer service. Highly recommended!",
+  "The quality is top-notch and delivery was super fast. Loved it!"
+];
+
 const TestimonialSection = () => {
+  const [currentReview, setCurrentReview] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentReview((prev) => (prev + 1) % reviews.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative flex flex-col items-center justify-center min-h-screen p-6 sm:p-8 lg:p-12 overflow-hidden bg-[#4C1242] font-['Inter']">
       {/* Grid Lines */}
-      <div className="absolute top-[20%] left-0 h-px w-[90%] bg-white/20"></div>
-      <div className="absolute bottom-[20%] left-0 h-px ml-25 w-full bg-white/20"></div>
-      <div className="absolute top-36 left-[22%] w-px h-full bg-white/20 hidden md:block"></div>
-      <div className="absolute bottom-36 right-[22%] w-px h-full bg-white/20 hidden md:block"></div>
+      <div className="absolute top-[20%] left-0 h-px w-[90%] bg-white hidden sm:block"></div>
+      <div className="absolute bottom-[20%] left-25 h-px w-full bg-white hidden sm:block"></div>
+      <div className="absolute top-36 left-[22%] w-px h-full bg-white hidden md:block"></div>
+      <div className="absolute bottom-36 right-[22%] w-px h-full bg-white hidden md:block"></div>
 
       {/* Decorative Stars */}
       <svg
@@ -498,48 +692,63 @@ const TestimonialSection = () => {
         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
       </svg>
 
-      <svg
-        className="absolute bottom-0 right-0 w-32 h-32 sm:w-40 sm:h-40 text-white translate-x-1/2 translate-y-1/2"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1"
-      >
-        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-      </svg>
-
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center px-1 sm:px-6 lg:px-50 py-10 sm:py-16">
-        {/* LEFT IMAGE → bottom left grid cross */}
-        <div className="hidden md:block absolute left-0 bottom-0 transform -translate-x-1/2 translate-y-1/2 sm:left-[10%] lg:left-[15%] sm:bottom-[25%] lg:bottom-[30%]">
+      <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-50 py-10 sm:py-16 gap-10 w-full">
+        {/* Images for small screens */}
+        <div className="flex flex-col items-center justify-center gap-6 md:hidden">
           <img
             src={leftImg}
-            alt="Customer wearing jewelry"
-            className="w-28 h-28 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mt-70 object-cover rounded-md shadow-2xl border-2 border-white"
+            alt="Customer Left"
+            className="w-28 h-28 sm:w-36 sm:h-36 lg:w-40 lg:h-40 object-cover rounded-md shadow-2xl border-2 border-white"
+          />
+          <blockquote className="block md:hidden max-w-3xl px-4 sm:px-6">
+            <p className="text-white text-xl sm:text-2xl font-serif leading-relaxed font-semibold">
+              {reviews[currentReview]}
+            </p>
+          </blockquote>
+          <img
+            src={rightImg}
+            alt="Customer Right"
+            className="w-28 h-28 sm:w-36 sm:h-36 lg:w-40 lg:h-40 object-cover rounded-md shadow-2xl border-2 border-white"
           />
         </div>
 
-        {/* QUOTE */}
-        <blockquote className="max-w-3xl mb-8 px-4 sm:px-6">
+        {/* Quote */}
+        <blockquote className=" hidden md:block max-w-3xl px-4 sm:px-6">
           <p className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif leading-relaxed font-semibold">
-            “Beautiful Jewellery and amazing Quality I Would definitely Purchase More!”
+            {reviews[currentReview]}
           </p>
         </blockquote>
 
-        {/* DOTS */}
-        <div className="flex gap-2 justify-center mb-6">
-          <span className="w-2 h-2 rounded-full bg-white"></span>
-          <span className="w-2 h-2 rounded-full bg-white opacity-50"></span>
-          <span className="w-2 h-2 rounded-full bg-white opacity-50"></span>
+        {/* Desktop Images */}
+        <div className="hidden md:block">
+          {/* Left Image */}
+          <div className="absolute left-0 bottom-0 transform -translate-x-1/2 translate-y-1/2 sm:left-[10%] lg:left-[15%] sm:bottom-[25%] lg:bottom-[30%]">
+            <img
+              src={leftImg}
+              alt="Customer"
+              className="w-28 h-28 sm:w-36 sm:h-36 md:mt-70 ml-40  lg:w-40 lg:h-40 object-cover rounded-md shadow-2xl border-2 border-white"
+            />
+          </div>
+          {/* Right Image */}
+          <div className="absolute right-0 top-0 transform translate-x-1/2 -translate-y-1/2 sm:right-[10%] lg:right-[15%] sm:top-[20%] lg:top-[15%]">
+            <img
+              src={rightImg}
+              alt="Customer"
+              className="w-28 h-28 sm:w-36 sm:h-36 md:mb-40 mr-40 lg:w-40 lg:h-40 object-cover rounded-md shadow-2xl border-2 border-white"
+            />
+          </div>
         </div>
 
-        {/* RIGHT IMAGE → top right grid cross */}
-        <div className="hidden md:block absolute right-0 top-0 transform translate-x-1/2 -translate-y-1/2 sm:right-[10%] lg:right-[15%] sm:top-[20%] lg:top-[15%]">
-          <img
-            src={rightImg}
-            alt="Customer wearing jewelry"
-            className="w-28 h-28 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mb-50 object-cover rounded-md shadow-2xl border-2 border-white"
-          />
+        {/* Dots */}
+        <div className="flex gap-2 justify-center mt-6">
+          {reviews.map((_, index) => (
+            <span
+              key={index}
+              className={`w-2 h-2 rounded-full ${currentReview === index ? "bg-white" : "bg-white opacity-50"
+                }`}
+            ></span>
+          ))}
         </div>
       </div>
     </section>
